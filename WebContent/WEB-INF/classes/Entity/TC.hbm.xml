@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-8 16:40:19 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Entity.TC" table="TC">
+        <id name="courseId" type="java.lang.String">
+            <column name="COURSEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="studentId" type="java.lang.String">
+            <column name="STUDENTID" />
+        </property>
+        <property name="studentName" type="java.lang.String">
+            <column name="STUDENTNAME" />
+        </property>
+        <property name="courseTitle" type="java.lang.String">
+            <column name="COURSETITLE" />
+        </property>
+        <property name="courseAuthor" type="java.lang.String">
+            <column name="COURSEAUTHOR" />
+        </property>
+        <property name="courseGrade" type="java.lang.String">
+            <column name="COURSEGRADE" />
+        </property>
+    </class>
+</hibernate-mapping>

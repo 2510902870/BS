@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-2 10:50:55 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Entity.Teachers" table="TEACHERS">
+        <id name="teacherId" type="java.lang.String">
+            <column name="TEACHERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="teacherName" type="java.lang.String">
+            <column name="TEACHERNAME" />
+        </property>
+        <property name="Tusername" type="java.lang.String">
+            <column name="TUSERNAME" />
+        </property>
+        <property name="Tpassword" type="java.lang.String">
+            <column name="TPASSWORD" />
+        </property>
+        <property name="teacherClass" type="java.lang.String">
+            <column name="TEACHERCLASS" />
+        </property>
+        <property name="teacherSex" type="java.lang.String">
+            <column name="TEACHERSEX" />
+        </property>
+        <property name="schoolName" type="java.lang.String">
+            <column name="SCHOOLNAME" />
+        </property>
+        <property name="teacherAge" type="java.lang.String">
+            <column name="TEACHERAGE" />
+        </property>
+    </class>
+</hibernate-mapping>

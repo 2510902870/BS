@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-13 13:40:02 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Entity.Stu_Teacher" table="STU_TEACHER">
+        <id name="commentId" type="int">
+            <column name="COMMENTID" />
+            <generator class="increment" />
+        </id>
+        <property name="studentId" type="java.lang.String">
+            <column name="STUDENTID" />
+        </property>
+        <property name="studentName" type="java.lang.String">
+            <column name="STUDENTNAME" />
+        </property>
+        <property name="teacherId" type="java.lang.String">
+            <column name="TEACHERID" />
+        </property>
+        <property name="teacherName" type="java.lang.String">
+            <column name="TEACHERNAME" />
+        </property>
+        <property name="studentContext" type="java.lang.String">
+            <column name="STUDENTCONTEXT" />
+        </property>
+        <property name="teacherContext" type="java.lang.String">
+            <column name="TEACHERCONTEXT" />
+        </property>
+        <property name="time" type="java.util.Date">
+            <column name="TIME" />
+        </property>
+        <property name="courseAddress" type="java.lang.String">
+            <column name="COURSEADDRESS" />
+        </property>
+        <property name="praise" type="int">
+            <column name="PRAISE" />
+        </property>
+    </class>
+</hibernate-mapping>

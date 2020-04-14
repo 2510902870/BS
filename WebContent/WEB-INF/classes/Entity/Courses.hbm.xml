@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-5 9:29:12 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Entity.Courses" table="COURSES">
+        <id name="courseId" type="java.lang.String">
+            <column name="COURSEID" />
+            <generator class="assigned"/>
+        </id>
+        <property name="courseGrade" type="java.lang.String">
+            <column name="COURSEGRADE" />
+        </property>
+        <property name="courseClass" type="java.lang.String">
+            <column name="COURSECLASS" />
+        </property>
+        <property name="courseDifficulty" type="java.lang.String">
+            <column name="COURSEDIFFICULTY" />
+        </property>
+        <property name="courseCoverAddress" type="java.lang.String">
+            <column name="COURSECOVERADDRESS" />
+        </property>
+        <property name="courseTitle" type="java.lang.String">
+            <column name="COURSETITLE" />
+        </property>
+        <property name="courseAddress" type="java.lang.String">
+            <column name="COURSEADDRESS" />
+        </property>
+        <property name="courseAuthor" type="java.lang.String">
+            <column name="COURSEAUTHOR" />
+        </property>
+        <property name="coursecheck" type="boolean">
+            <column name="COURSECHECK" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="struts2.3.37" namespace="/" extends="struts-default">
+		<!-- <interceptors>
+			<interceptor name="LoginInterceptor" class="Action.LoginInterceptor"></interceptor>
+		</interceptors> -->
+		
+		
+		<!-- 登录action -->
+		<action name="LoginVerifyAction" class="Action.LoginVerifyAction"
+			method="execute">
+			<!-- <interceptor-ref name="LoginInterceptor"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref> -->
+			<result name="login_success">/jsp/homePage.jsp</result>
+			<result name="login_default">/jsp/login.jsp</result>
+		</action>
+		
+		<!--注册action  -->
+		<action name="TeacherRegisterAction" class="Action.TeacherRegisterAction" >
+				<result name="success">/jsp/login.jsp</result>
+		</action>
+		<action name="StudentRegisterAction" class="Action.StudentRegisterAction"
+			method="sava">
+			<result name="success">/jsp/login.jsp</result>
+		</action>
+		
+	
+		<!--个人信息跳转页面action  -->
+		<action name="PersonalAction" class="Action.PersonalAction" method="execute">
+				<result name="teachers">/jsp/teachers.jsp</result>
+				<result name="students">/jsp/students.jsp</result>
+				<result name="admins">/jsp/admins.jsp</result>
+		</action>
+		
+		<!-- TSaction -->
+		<action name="SandTinfoAction" class="Action.SandTinfoAction" method="execute">
+			<result name="teacher">/jsp/teachers.jsp</result>
+			<result name="student">/jsp/students.jsp</result>
+		</action>
+		
+		<!--  Upload-->
+			<action name="TUploadAction" class="Action.TUploadAction" method="execute">
+				 <result name="success">/jsp/teachers.jsp</result> 
+		</action>
+		
+		
+		<!--teachers'Courses  -->
+		<action name="TeachersCourse" class="Action.TeachersCourse" method="execute">
+				<result name="success">/jsp/teachers.jsp</result>
+		</action>
+		
+		<!--alterPassword  -->
+		<action name="AlterPasswordAction" class="Action.AlterPasswordAction" method="execute">
+				<result name="student_success">/jsp/students.jsp</result>
+				<result name="student_default">/jsp/alterPassword.jsp</result>
+				<result name="teacher_success">/jsp/teachers.jsp</result>
+				<result name="teacher_default">/jsp/alterPassword.jsp</result>
+		</action>
+		
+		<!--  Action.TDeleteCourse-->
+		<action name="TDeleteCourse" class="Action.TDeleteCourse" method="execute">
+			<result name="success">/jsp/teachers.jsp</result>
+		</action>
+		<!-- 图片链接显示图片 -->
+		<action name="ShowVideoAction" class="Action.ShowVideoAction" method="execute">
+				<result name="success">/jsp/showVideoes.jsp</result>
+		</action>
+		
+		<!-- findCourse -->
+		<action name="FindCoursesAction" class="Action.FindCoursesAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		
+		<!-- searchCourse -->
+		<action name="SearchCoursesAction" class="Action.SearchCoursesAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		<!--moreCourse  -->
+		<action name="MoreCoursesAction" class="Action.MoreCoursesAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		<!-- subscribe -->
+			<action name="SubscibeCourseAction" class="Action.SubscibeCourseAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		
+		
+			<action name="StudentCourseAction" class="Action.StudentCourseAction" method="execute">
+				<result name="success">/jsp/cancelSubscribe.jsp</result>
+		</action>
+		
+		<!-- Action.DeleteSubscribeAction -->
+		<action name="DeleteSubscribeAction" class="Action.DeleteSubscribeAction" method="execute">
+				<result name="success">/jsp/cancelSubscribe.jsp</result>
+		</action>
+		
+		<!-- Action.AdmincheckCourseAction 审核课程-->
+		<action name="AdmincheckCourseAction_*" class="Action.AdmincheckCourseAction" method="{1}">
+				<result name="success">/jsp/findCourses.jsp</result>
+				<result name="allpost">/jsp/admins.jsp</result>
+		</action>
+		
+	<!--  Action.PassCourseAction-->
+		<action name="PassCourseAction" class="Action.PassCourseAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		<!--Action.RefuseCourseAction  -->
+		<action name="RefuseCourseAction" class="Action.RefuseCourseAction" method="execute">
+				<result name="success">/jsp/findCourses.jsp</result>
+		</action>
+		
+		<!-- Action.GetTeacherInfoAction -->
+		<action name="GetTeacherInfoAction" class="Action.GetTeacherInfoAction" method="execute">
+				<result name="success">/jsp/admins.jsp</result>
+		</action>
+		<!-- Action.SGetScoresAction -->
+		<action name="SGetScoresAction" class="Action.SGetScoresAction" method="execute">
+				<result name="success">/jsp/students.jsp</result>
+		</action>
+		
+		<!--Action.TGetScoresAction  -->
+			<action name="TGetScoresAction" class="Action.TGetScoresAction" method="execute">
+				<result name="success">/jsp/teachers.jsp</result>
+		</action>
+		
+		<!-- Action.CommentAction -->
+			<action name="CommentAction" class="Action.CommentAction" method="execute">
+			<result name="success">/jsp/showVideoes.jsp</result>
+		</action>
+		
+		<!--Action.TadmireAction  -->
+		<action name="TadmireAction" class="Action.TadmireAction" method="execute">
+				<result name="success" >/jsp/showVideoes.jsp</result>
+		</action>
+		
+		<!--  Action.ReturnHomeAction返回主页-->
+		<action name="ReturnHomeAction" class="Action.ReturnHomeAction" method="execute">
+				<result name="success">/jsp/homePage.jsp</result>
+		</action>
+		
+		<!--Action.Stu_ReportAction  -->
+			<action name="Stu_ReportAction" class="Action.Stu_ReportAction" method="execute">
+				<result name="success">/jsp/students.jsp</result>
+		</action>
+		
+		<!-- Action.AdminSerachAction -->
+			<action name="AdminSerachAction" class="Action.AdminSerachAction" method="execute">
+				<result name="success">/jsp/adminSerach.jsp</result>
+		</action>
+		
+		
+		
+		<!-- test测试 -->
+			<action name="Test" class="Action.Test" method="execute">
+				<result name="success">/jsp/homePage.jsp</result>
+		</action>
+		
+	</package>
+</struts>
+
+  
